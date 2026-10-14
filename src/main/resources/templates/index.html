@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <main class="page">
+        <section class="launch-card" aria-labelledby="page-title">
+            <h1 id="page-title">Welcome back</h1>
+            <p>Sign in to your account</p>
+            <form id="login-form" action="/login" method="post" autocomplete="on">
+                <div class="form-group">
+                    <label for="login-email">Email Address</label>
+                    <div class="input-wrapper">
+                        <input type="email" id="login-email" name="email" class="form-control" placeholder="name@example.com" autocomplete="email" maxlength="254" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <div class="input-wrapper">
+                        <input type="password" id="login-password" name="password" class="form-control" placeholder="Your password" autocomplete="current-password" required>
+                    </div>
+                </div>
+
+                <button class="btn-submit" type="submit">Sign in</button>
+                <p class="form-status login-status" id="login-status" role="status" aria-live="polite"></p>
+            </form>
+            <p class="register-prompt">Don't have an account?
+                <button class="text-button" id="open-modal" type="button">Create an account</button>
+            </p>
+        </section>
+    </main>
+
+    <dialog class="signup-modal" id="signup-modal" aria-labelledby="modal-title">
+        <section class="form-card">
+            <button class="modal-close" id="close-modal" type="button" aria-label="Close form">&times;</button>
+            <header class="form-header">
+                <h2 id="modal-title">Create an account</h2>
+                <p>Get started with your free trial profile</p>
+            </header>
+
+            <form id="registration-form" action="/users" method="post" autocomplete="on">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="name" name="name" class="form-control" placeholder="John Doe" autocomplete="name" maxlength="100" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <div class="input-wrapper">
+                        <input type="email" id="email" name="email" class="form-control" placeholder="name@example.com" autocomplete="email" maxlength="254" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-wrapper">
+                        <input type="password" id="password" name="password" class="form-control" placeholder="Enter a password" autocomplete="new-password" minlength="8" maxlength="72" required>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <label class="checkbox-container" for="terms">
+                        <input type="checkbox" id="terms" name="terms" value="true" required>
+                        <span class="custom-checkbox" aria-hidden="true"></span>
+                        I agree to the Terms and Privacy Policy
+                    </label>
+                </div>
+
+                <button type="submit" class="btn-submit">Register Account</button>
+                <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </dialog>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

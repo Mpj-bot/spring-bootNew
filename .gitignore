@@ -31,3 +31,18 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Database and secrets ###
+src/main/resources/application.properties
+application-local.properties
+application-prod.properties
+.env
+
+### Database files and dumps ###
+*.sql.bak
+*.dump
+*.backup
+*.sqlite
+*.db
+*.mv.db
+*.trace.db
